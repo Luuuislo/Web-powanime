@@ -1,0 +1,48 @@
+.anime-list-2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 columnas */
+  gap: 30px; /* Espaciado entre tarjetas */
+  max-width: 1400px;
+  margin: 0 auto; /* Centrar el contenedor */
+  padding: 1rem;
+}
+
+.h1-animelist{
+  color: whitesmoke;
+  text-align: left;
+  margin-left: 3%;
+  font-size: 2rem;
+}
+
+.anime-card-2 {
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anime-card-2 img:hover {
+  transform: scale(1.05);
+}
+
+.anime-card-2 img {
+  max-width: 100%;
+  height: auto;
+  
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .anime-list-2 {
+    grid-template-columns: repeat(2, 1fr); /* 3 columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .anime-list-2 {
+   
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+  }
+
+
+}

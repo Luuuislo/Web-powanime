@@ -1,0 +1,293 @@
+/* Anime Details Container */
+.anime-details {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background-color: hwb(0 8% 92% / 0.747);
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px; /* Limitar el ancho máximo */
+  overflow-x: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Asegura que se ajuste al ancho de pantalla */
+}
+
+/* Estilo para los episodios vistos */
+.episode-item.watched {
+  border: 2px solid #00ff00;
+  padding: 10px;
+}
+
+/* Estilo para mostrar "Visto" al lado del título del episodio */
+.watched-label {
+  font-size: 0.9em;
+  color: #00ff00;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.anime-likes-views {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.anime-likes-views p {
+  margin: 5px 0;
+}
+
+.anime-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.anime-image {
+  width: 100%; /* Ajusta al 100% del contenedor */
+  max-width: 338px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.anime-info {
+  flex: 1;
+  margin-left: 2%;
+  min-width: 250px;
+  max-width: 100%;
+}
+
+.anime-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.anime-synopsis {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.anime-synopsis.show-full {
+  display: block;
+  overflow: visible;
+}
+
+.show-more {
+  color: #09ff00;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.anime-meta p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.anime-meta strong {
+  color: #1eff00;
+}
+
+/* Botones debajo de la portada del anime */
+.anime-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* Asegura que los botones se ajusten en pantallas pequeñas */
+}
+
+.anime-button {
+  background-color: #242424;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.anime-button:hover {
+  background-color: #09ff00;
+}
+
+/* Episode List - Vertical Scroll */
+.episode-scroll {
+  max-height: 400px;
+  width: 90%;
+  overflow-y: auto;
+  padding: 15px 0;
+  background-color: #080808;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.episode-item {
+  background-color: #202020b0;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  text-align: start;
+  transition: background-color 0.3s ease;
+}
+
+.episode-item:hover {
+  background-color: #09ff00;
+}
+
+.episode-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.episode-link:hover {
+  color: #1d1d1d;
+  text-decoration: underline;
+}
+
+/* Botones de grupos de episodios */
+.group-button {
+  background-color: #242424;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.group-button:hover {
+  background-color: #09ff00;
+}
+
+.group-button.active {
+  background-color: #09ff00;
+  border-color: #09ff00;
+}
+
+.anime-details .show-more {
+  color: #09ff00;
+}
+
+/* Estilos para el botón de like */
+.anime-like-button {
+  width: 74%;
+  background-color:  #0099ff;
+  color: #242424;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+/* Anime Likes and Views Container */
+.anime-likes-views {
+  margin-top: 15px;
+  font-size: 16px;
+  display: flex;
+  justify-content: start;
+  text-align: center;
+  gap: 20px; /* Espacio entre los dos elementos */
+}
+
+.anime-likes-views p {
+  margin: 5px 0;
+  display: inline-block;
+}
+.anime-likes-views {
+  justify-content: center;
+}
+
+
+.anime-like-button:hover {
+  background-color: #1dff00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .anime-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .anime-image {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 0px;
+  }
+
+  .anime-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .anime-synopsis {
+    font-size: 1rem;
+  }
+
+  .anime-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .episode-item {
+    min-width: 120px;
+  }
+
+  .episode-link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .anime-title {
+    font-size: 1.8rem;
+  }
+
+  .episode-link {
+    font-size: 0.9rem;
+  }
+
+  .anime-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .anime-image {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Loading Spinner */
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #09ff00;
+}

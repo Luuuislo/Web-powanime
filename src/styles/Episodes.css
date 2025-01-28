@@ -1,0 +1,122 @@
+.container {
+  margin: 0 auto; /* Centra horizontalmente */
+  max-width: 1450px; /* Ancho máximo para pantallas grandes */
+  padding: 0 20px; /* Espaciado lateral en todas las pantallas */
+}
+
+/* Estilos generales */
+.episodes-list {
+  text-align: center;
+  padding: 20px;
+}
+
+.h1-episodelist{
+  color: whitesmoke;
+  text-align: left;
+  margin-left: 3%;
+  font-size: 2rem;
+  margin-top: 5%;
+}
+
+.episode-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas por defecto */
+  gap: 15px;
+}
+
+.episode-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.episode-card:hover {
+  transform: scale(1.05); /* Efecto de zoom */
+}
+
+.episode-link {
+  display: block;
+  position: relative;
+}
+
+.episode-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Contenedor para la imagen, aplicando filtro verde solo aquí */
+.episode-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+
+
+.episode-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;  /* Tamaño del icono de play */
+  height: auto;
+  opacity: 0; /* Ocultar el icono inicialmente */
+  transition: opacity 0.5s ease; /* Suavizar la aparición */
+}
+
+/* Mostrar el icono de play al pasar el mouse */
+.episode-image-wrapper:hover .play-icon {
+  opacity: 3; /* Mostrar icono de play al pasar el mouse */
+}
+
+.episode-number {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.76);
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 50%;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+p {
+  margin: 5px 0;
+  color: gray;
+  font-size: 15px;
+}
+
+.episode-card .watched-label{
+  color: rgb(100, 100, 100);
+  margin: 0;
+  font-weight: 500;
+  
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .episode-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+  }
+
+  .container {
+    padding: 0 10px; /* Reduce el espaciado lateral en móviles */
+  }
+}

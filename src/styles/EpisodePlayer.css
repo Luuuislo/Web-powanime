@@ -1,0 +1,251 @@
+.episode-player {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .player-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .video-section {
+    flex: 1;
+    max-width: 940px;
+    margin-bottom: 20px;
+  }
+  
+  .recommended-section {
+    flex: 2;
+    max-width: 300px;
+    background-color: #1414145b;
+    padding: 15px;
+    border-radius: 8px;
+   
+    margin-top: 20px;
+  }
+  
+  .recommended-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .recommended-item {
+    text-align: center;
+    position: relative;
+  }
+  
+  .recommended-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .episode-number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .nav-button {
+    padding: 10px 20px;
+    color: white;
+    background-color: #15ff00;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    width: 30%;
+  }
+  
+  .nav-button:hover {
+    background-color:  #1eff006e;
+  }
+  
+  .prev-button {
+    background-color: #1eff00;
+  }
+  
+  .list-button {
+    background-color: #2d2e2e;
+  }
+  
+  .next-button {
+    background-color:#1eff00;
+  }
+
+  /* En el archivo EpisodePlayer.css */
+.episode-player iframe {
+    width: 940px;
+    height: 600px;
+  }
+
+  /* Estilo para los episodios marcados como vistos */
+.last-watched {
+  border: 2px solid #1eff00; /* Puedes cambiar el color como prefieras */
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Efecto brillante */
+}
+
+.recommended-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.recommended-image:hover {
+  transform: scale(1.05);
+ 
+} 
+
+/* Estilo para el botón de Like */
+.like-button {
+  background-color: #0044ff; /* Color atractivo */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px; /* Bordes redondeados */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: auto;
+  margin-top: 15px;
+}
+
+.like-button:hover {
+  background-color: #09ff00; /* Color al pasar el ratón */
+  transform: scale(1.1); /* Efecto de agrandado */
+}
+
+.like-button.liked {
+  background-color: #3172ff; /* Color cuando ya le dieron like */
+}
+
+.like-button.liked:hover {
+  background-color: #00ff0d; /* Color al pasar el ratón cuando está "liked" */
+}
+
+.like-button:disabled {
+  background-color: #3172ff; /* Color cuando el botón está deshabilitado */
+  cursor: not-allowed;
+}
+
+/* Estilo para el contador de vistas y likes */
+.episode-info {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.episode-info p {
+  margin: 0;
+}
+
+.episode-info strong {
+  color: #ff6f61; /* Color atractivo para los números */
+}
+
+/* Estilo para los botones de navegación */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.nav-button {
+  padding: 12px 25px;
+  color: white;
+  background-color: #363636;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  width: 30%;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #1eff00;
+}
+
+/* Estilo para pantallas móviles */
+@media (max-width: 768px) {
+  .episode-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-button {
+    width: 100%;
+  }
+}
+
+
+  
+  /* Para pantallas móviles */
+  @media (max-width: 768px) {
+    .episode-player iframe {
+      width: 100%;
+      height: 300px; /* Para que el alto se ajuste proporcionalmente */
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .player-container {
+        
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .video-section, .recommended-section {
+      max-width: 100%;
+    }
+  
+    .recommended-section {
+      margin-top: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navigation-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .nav-button {
+      width: 100%;
+    }
+  }
+  

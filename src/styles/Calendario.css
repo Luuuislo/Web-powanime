@@ -1,0 +1,63 @@
+.calendario-container {
+  padding: 20px;
+  background-color: transparent;
+  color: white;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+}
+
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.anime-card {
+  background-color: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+ 
+  text-align: center;
+}
+
+.anime-image {
+  width: 100%;
+  height: auto;
+}
+
+.anime-title {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.anime-date {
+  font-size: 14px;
+  color: #00ff00; /* Verde */
+}
+
+.loading, .error {
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+
+/* Adaptabilidad para pantallas pequeñas */
+@media (max-width: 1200px) {
+  .anime-grid {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .anime-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .anime-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}

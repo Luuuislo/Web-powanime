@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Fondo centrado */
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    max-height: 100vh; /* Evitar scroll en pantallas altas */
+    padding: 3rem; /* Espaciado para dispositivos móviles */
+    
+    font-family: "Roboto Condensed", serif;
+    color: #fff;
+    overflow: hidden; /* Evitar desbordamiento */
+}
+
+/* Formulario */
+.register-form {
+    background: #222121;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    max-height: 90vh; /* Máximo alto dinámico */
+    overflow-y: auto; /* Scroll interno si el contenido crece demasiado */
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    color: #fff; /* Mayor contraste */
+}
+
+/* Título */
+.register-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #c7c7c7;
+}
+
+/* Grupo de entradas */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #c7c7c7;
+}
+
+.input-group input {
+    width: 90%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    background: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+}
+
+.input-group input:focus {
+    border-color: #00ff40;
+    outline: none;
+}
+
+/* Botón */
+.register-button {
+    background-color: #00ff40;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.register-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.register-button:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(74, 226, 94, 0.4);
+}
+
+/* Pie */
+.register-footer {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.register-footer a {
+    color: #13fe4e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsividad para pantallas móviles */
+@media (max-width: 480px) {
+    .register-form {
+        padding: 1.5rem; /* Reducir padding */
+    }
+
+    .register-title {
+        font-size: 1.5rem; /* Reducir tamaño del título */
+    }
+
+    .input-group input {
+        padding: 0.6rem; /* Reducir padding de los inputs */
+        font-size: 0.9rem; /* Ajustar tamaño del texto */
+    }
+
+    .register-button {
+        padding: 0.6rem 1rem; /* Reducir tamaño del botón */
+        font-size: 0.9rem; /* Ajustar fuente del botón */
+    }
+
+    .register-footer {
+        font-size: 0.8rem; /* Reducir tamaño del texto del pie */
+    }
+}

@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", serif;
+  background-color: rgb(10, 10, 10);
+  color: antiquewhite;
+}
+
+/* Header Principal */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  height: 85px; /* Altura fija */
+  padding: 0 10%; /* Ajustado para evitar cambios */
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.main-header .logo {
+  display: flex;
+  align-items: center;
+  margin: 0; /* Sin márgenes */
+}
+
+.main-header .logo img {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.main-header .logo:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.main-header .nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  margin: 0; /* Sin márgenes */
+}
+
+.main-header .nav-links .link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.main-header .nav-links .link:hover {
+  transform: scale(1.05);
+  color: rgb(5, 255, 5);
+}
+
+.main-header .btn-login button {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgb(0, 255, 0);
+}
+.main-header .perfil-btn{
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgb(0, 255, 0);
+}
+
+.main-header .btn-login button:hover {
+  background-color: rgb(0, 255, 0);
+  color: rgb(0, 0, 0);
+  transform: scale(1.05);
+}
+
+.main-header .main-buscador {
+  padding: 10px;
+  border-radius: 7px;
+  background-color: transparent;
+  color: aliceblue;
+  border: 2px solid aliceblue;
+  outline: none;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  margin: 0; /* Ajustado para evitar inconsistencias */
+}
+
+.main-header .main-buscador:hover {
+  transform: scale(1.05);
+  border-color: rgb(0, 255, 0);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 5%;
+    height: auto;
+  }
+
+  .main-header .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .main-header .btn-login button {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .main-header .main-buscador {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header .logo img {
+    height: 50px;
+  }
+
+  .main-header .nav-links .link {
+    font-size: 16px;
+  }
+
+  .main-header .btn-login button {
+    font-size: 14px;
+  }
+
+  .main-header .main-buscador {
+    font-size: 14px;
+  }
+}
+
+/* Estilo del botón hamburguesa */
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Logo en la parte izquierda */
+.logo-movil {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-header .logo-movil img {
+  height: 60px;
+  width: auto;
+}
+
+/* Menú hamburguesa en la parte derecha */
+.hamburger {
+  font-size: 50px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Estilo del menú móvil */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0; /* Fuera de la pantalla inicialmente */
+  width: 55%; /* Ocupa el 55% del ancho de la pantalla */
+  height: 85%;
+  background-color: rgb(20, 20, 20);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinear el contenido a la izquierda */
+  justify-content: flex-start;
+  border-radius: 10px;
+  gap: 20px;
+  padding: 30px;
+  z-index: 1000;
+  transition: transform 1s ease-in-out; /* Animación de deslizamiento */
+  transform: translateX(0);
+}
+
+/* Mostrar el menú al abrir */
+.mobile-menu.open {
+  transform: translateX(50%); /* Mover a la posición visible */
+}
+
+/* Estilo del botón de cerrar menú */
+.close-btn {
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+  align-self: flex-end; /* Colocar en la esquina derecha */
+  margin-bottom: 20px;
+}
+
+/* Estilo de los enlaces del menú móvil */
+.mobile-menu .nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 5px;
+}
+
+.mobile-menu .link {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+  margin: 10px;
+}
+
+.mobile-menu .link:hover {
+  color: #2bff00; /* Color destacado */
+}
+
+input {
+  margin-top: 5%;
+  margin-bottom: 30px;
+  padding: 12px;
+  background-color: transparent;
+  color: aliceblue;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.mobile-menu .logo-movil img {
+  height: 60px;
+  width: auto;
+}
+
+.mobile-menu .logo-movil {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 35px;
+}
+
+.mobile-menu .nav-links .list {
+  margin: 15px 0;
+}
+
+.mobile-menu img {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}

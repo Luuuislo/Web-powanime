@@ -1,0 +1,183 @@
+/* Asegura que el contenedor principal tenga márgenes adecuados */
+.container-catalago {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Estilos para el header */
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los filtros */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Permite que los filtros se ajusten en pantallas pequeñas */
+  gap: 10px; /* Espacio entre filtros */
+}
+
+select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s ease;
+}
+
+select:hover {
+  background-color: #e0e0e0; /* Cambia de color al pasar el cursor */
+}
+
+/* Estilos para la cuadrícula de los animes */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 1200px; /* Limita el ancho máximo de la cuadrícula */
+  margin-left: auto;
+  margin-right: auto; /* Centra el contenedor */
+}
+
+/* Ajustes para las tarjetas de los animes */
+.anime-card {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anime-card:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+.anime-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.anime-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  margin-bottom: 5px;
+}
+
+.anime-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Estilos para la paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px 25px;
+  font-size: 1rem;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: rgb(0, 255, 0);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: rgb(39, 39, 39);
+  color: #ffffff;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination-list li {
+  margin: 0 5px;
+}
+
+.pagination-list a {
+  text-decoration: none;
+  padding: 8px 12px;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 4px;
+}
+
+.pagination-list li.active a {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination-list li.disabled a {
+  pointer-events: none;
+  color: #ccc;
+}
+
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .catalogo {
+    grid-template-columns: repeat(2, 1fr); /* Mostrar 2 columnas en móviles */
+    gap: 10px; /* Reduce el espacio entre tarjetas */
+  }
+
+  .anime-card img {
+    width: 100%; /* Ajusta las imágenes al 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .filters {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pagination button {
+    margin: 5px 0;
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .filters select {
+    font-size: 0.9rem; /* Ajustar tamaño de fuente en móviles pequeños */
+    padding: 8px;
+  }
+
+  .pagination button {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}

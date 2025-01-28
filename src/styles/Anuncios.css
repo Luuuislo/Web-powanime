@@ -1,0 +1,20 @@
+.div-anuncios {
+    
+    
+    text-align: center;
+    color: rgb(224, 224, 224);
+    background-color: rgb(22, 22, 22);
+    height: 70px;
+    border-radius: 15px;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 5%;
+    padding: 10px;
+    
+   
+}
+
+.div-anuncios a {
+    color: rgb(0, 255, 0);
+    
+}
